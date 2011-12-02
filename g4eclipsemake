@@ -1,0 +1,5 @@
+#!/bin/sh
+export G4WORKDIR=/Applications/g4work
+export DYLD_LIBRARY_PATH=/Applications/CLHEP/lib
+source /Applications/geant4.9.3.p02/env.sh
+make $1
