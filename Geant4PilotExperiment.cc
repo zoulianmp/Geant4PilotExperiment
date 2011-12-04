@@ -95,12 +95,12 @@ int main(G4int argc, char** argv) {
 	//UI->ApplyCommand("/tracking/storeTrajectory");
 	//UI->ApplyCommand("/vis/viewer/set/style surface"); //wireframe or surface
 	//UI->ApplyCommand("/tracking/storeTrajectory 20");
-	//UI->ApplyCommand("/vis/scene/endOfEventAction accumulate 30");
+	UI->ApplyCommand("/vis/scene/endOfEventAction accumulate 30");
 */
 
-	G4int numberOfEvent = 300;
+	G4int numberOfEvent = 30;
 
-	for (int i = 10; i > 0; --i){
+	for (int i = 1; i > 0; --i){
 	//	  detector->setEspessura( (G4double)(10.0*mm / i) );
 	//	  runManager->GeometryHasBeenModified();
 	  runManager->BeamOn(numberOfEvent);
@@ -109,9 +109,10 @@ int main(G4int argc, char** argv) {
 	//  session->SessionStart();
 	//  delete session;
 
-#ifdef G4VIS_USE
-	delete visManager;
-#endif
+
+//#ifdef G4VIS_USE
+//	delete visManager;
+//#endif
 
 	delete runManager;
 
