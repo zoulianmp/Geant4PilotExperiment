@@ -71,7 +71,7 @@ int main(G4int argc, char** argv) {
 
 
 /******* Get the pointer to the UI manager and set verbosities *******/
-/*
+
 	G4UImanager* UI = G4UImanager::GetUIpointer();
 	UI->ApplyCommand("/vis/open OGLIX");
 	//UI->ApplyCommand("/vis/drawView");
@@ -96,7 +96,7 @@ int main(G4int argc, char** argv) {
 	//UI->ApplyCommand("/vis/viewer/set/style surface"); //wireframe or surface
 	//UI->ApplyCommand("/tracking/storeTrajectory 20");
 	UI->ApplyCommand("/vis/scene/endOfEventAction accumulate 30");
-*/
+
 
 	G4int numberOfEvent = 30;
 
@@ -114,7 +114,7 @@ int main(G4int argc, char** argv) {
 //	delete visManager;
 //#endif
 
-	delete runManager;
+//	delete runManager;
 
 	return 0;
 }
